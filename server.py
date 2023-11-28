@@ -87,6 +87,8 @@ class PromptServer():
         self.sockets = dict()
         self.web_root = os.path.join(os.path.dirname(
             os.path.realpath(__file__)), "web")
+                    # os.path.realpath(__file__)), "react-parcel-example/dist")
+
         routes = web.RouteTableDef()
         self.routes = routes
         self.last_node_id = None
