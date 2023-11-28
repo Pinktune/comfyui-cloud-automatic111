@@ -6,6 +6,7 @@ import { defaultGraph } from "./defaultGraph.js";
 import { getPngMetadata, getWebpMetadata, importA1111, getLatentMetadata } from "./pnginfo.js";
 import { addDomClippingSetting } from "./domWidget.js";
 import { createImageHost, calculateImageGrid } from "./ui/imagePreview.js"
+import nodesDefs from './nodesDefs.json'
 
 export const ANIM_PREVIEW_WIDGET = "$$comfy_animation_preview"
 
@@ -337,6 +338,7 @@ export class ComfyApp {
 	}
 
 	#addNodeKeyHandler(node) {
+		console.log('addNodeKeyHandler',node)
 		const app = this;
 		const origNodeOnKeyDown = node.prototype.onKeyDown;
 
@@ -1359,8 +1361,8 @@ export class ComfyApp {
 	 */
 	async registerNodes() {
 		const app = this;
-		// Load node definitions from the backend
-		const defs = await api.getNodeDefs();
+		// Load node definitions from local json file instead of from the backend
+		const defs = nodesDefs
 		await this.registerNodesFromDefs(defs);
 		await this.#invokeExtensionsAsync("registerCustomNodes");
 	}

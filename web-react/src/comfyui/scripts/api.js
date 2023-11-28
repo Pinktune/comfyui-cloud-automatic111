@@ -12,6 +12,7 @@ class ComfyApi extends EventTarget {
 	}
 
 	fetchApi(route, options) {
+		console.error('Should not fetch API in client mode!', route, options)
 		return fetch(this.apiURL(route), options);
 	}
 
@@ -177,7 +178,7 @@ class ComfyApi extends EventTarget {
 	 * @returns The node definitions
 	 */
 	async getNodeDefs() {
-		const resp = await this.fetchApi("/object_info", { cache: "no-store" });
+		// const resp = await this.fetchApi("/object_info", { cache: "no-store" });
 		return await resp.json();
 	}
 
