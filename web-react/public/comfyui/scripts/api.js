@@ -4,10 +4,22 @@ class ComfyApi extends EventTarget {
   constructor() {
     super();
     this.api_host = location.host;
+    // console.log("meta.env.DEV", import.meta.env.DEV);
+    // console.log("meta.env.MODE", import.meta.env.MODE);
+    if (
+      true &&
+      (this.api_host.indexOf("127.0.0.1") !== -1 ||
+        this.api_host.indexOf("localhost") !== -1)
+    ) {
+      // is localhost
+      this.api_base = "http://127.0.0.1:8188";
+      return;
+    }
     this.api_base = location.pathname.split("/").slice(0, -1).join("/");
   }
 
   apiURL(route) {
+    console.log("apiURL", this.api_base + route);
     return this.api_base + route;
   }
 
@@ -224,6 +236,7 @@ class ComfyApi extends EventTarget {
     } else if (number != 0) {
       body.number = number;
     }
+    console.log("api/queuePrompt", body);
 
     const res = await this.fetchApi("/prompt", {
       method: "POST",

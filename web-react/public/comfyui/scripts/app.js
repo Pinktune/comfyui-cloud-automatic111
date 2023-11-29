@@ -13,6 +13,7 @@ import { addDomClippingSetting } from "./domWidget.js";
 import { createImageHost, calculateImageGrid } from "./ui/imagePreview.js";
 import { nodesDefs } from "./nodesDefs.js";
 export const ANIM_PREVIEW_WIDGET = "$$comfy_animation_preview";
+// import { LGraph, LGraphCanvas } from "../types/litegraph.d.ts";
 
 function sanitizeNodeName(string) {
   let entityMap = {
@@ -1821,6 +1822,8 @@ export class ComfyApp {
    * @returns The workflow and node links
    */
   async graphToPrompt() {
+    const exeOrder = this.graph.computeExecutionOrder(false);
+    console.log("exeorder", exeOrder);
     for (const node of this.graph.computeExecutionOrder(false)) {
       if (node.isVirtualNode) {
         // Don't serialize frontend only nodes but let them make changes
@@ -1832,6 +1835,7 @@ export class ComfyApp {
     }
 
     const workflow = this.graph.serialize();
+    console.log("workflow", workflow);
     const output = {};
     // Process nodes in order of execution
     for (const node of this.graph.computeExecutionOrder(false)) {
@@ -1987,7 +1991,7 @@ export class ComfyApp {
 
         for (let i = 0; i < batchCount; i++) {
           const p = await this.graphToPrompt();
-
+          console.log("p graph to prompt", p);
           try {
             const res = await api.queuePrompt(number, p);
             this.lastNodeErrors = res.node_errors;

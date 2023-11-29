@@ -86,10 +86,12 @@ class PromptServer():
         self.app = web.Application(client_max_size=max_upload_size, middlewares=middlewares)
         self.sockets = dict()
         self.web_root = os.path.join(os.path.dirname(
-            os.path.realpath(__file__)), "web-automatic")
+            os.path.realpath(__file__)), "web-react/dist")
                     # os.path.realpath(__file__)), "react-parcel-example/dist")
 
         routes = web.RouteTableDef()
+        routes.static('/public/comfyui', os.path.join(os.path.dirname(
+            os.path.realpath(__file__)), "web-react/dist/comfyui"))
         self.routes = routes
         self.last_node_id = None
         self.client_id = None
@@ -390,7 +392,10 @@ class PromptServer():
 
         @routes.get("/prompt")
         async def get_prompt(request):
-            return web.json_response(self.get_queue_info())
+            headers = {
+            'Access-Control-Allow-Origin': '*'
+            }
+            return web.json_response(self.get_queue_info(),headers=headers)
 
         def node_info(node_class):
             obj_class = nodes.NODE_CLASS_MAPPINGS[node_class]
