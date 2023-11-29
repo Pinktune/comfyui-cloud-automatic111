@@ -11,8 +11,7 @@ import {
 } from "./pnginfo.js";
 import { addDomClippingSetting } from "./domWidget.js";
 import { createImageHost, calculateImageGrid } from "./ui/imagePreview.js";
-// import nodesDefs from './nodesDefs.json'
-const nodesDefs = {};
+import { nodesDefs } from "./nodesDefs.js";
 export const ANIM_PREVIEW_WIDGET = "$$comfy_animation_preview";
 
 function sanitizeNodeName(string) {
