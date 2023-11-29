@@ -8,19 +8,19 @@ import { LiteGraph, LGraphCanvas, LGraph } from "litegraph.js";
 // import comfyweb from "./comfyui/index.html";
 // import comfyIndexPublic from "/comfyIndex.html?raw";
 // import imgUrl from './img.png'
-import { app } from "./comfyui/scripts/app.js";
+// import { app } from "./comfyui/scripts/app.js";
 
 export default function App() {
   const [count, setCount] = useState(0);
   console.log("lgraph", LGraph);
-  useEffect(() => {
-    const setup = async () => {
-      await app.setup();
-      window.app = app;
-      window.graph = app.graph;
-    };
-    setup();
-  }, []);
+  // useEffect(() => {
+  //   const setup = async () => {
+  //     await app.setup();
+  //     window.app = app;
+  //     window.graph = app.graph;
+  //   };
+  //   setup();
+  // }, []);
   return (
     <div style={{ width: "1000px" }}>
       <div>
