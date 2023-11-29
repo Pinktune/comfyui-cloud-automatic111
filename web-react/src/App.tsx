@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import reactLogo from "./assets/react.svg";
+// import reactLogo from "./assets/react.svg";
 // import viteLogo from "/vite.svg";
 import "./App.css";
 import { LiteGraph, LGraphCanvas, LGraph } from "litegraph.js";
@@ -10,7 +10,7 @@ import { LiteGraph, LGraphCanvas, LGraph } from "litegraph.js";
 // import imgUrl from './img.png'
 import { app } from "./comfyui/scripts/app.js";
 
-function App() {
+export default function App() {
   const [count, setCount] = useState(0);
   console.log("lgraph", LGraph);
   useEffect(() => {
@@ -27,9 +27,9 @@ function App() {
         <a href="https://vitejs.dev" target="_blank">
           {/* <img src={viteLogo} className="logo" alt="Vite logo" /> */}
         </a>
-        <a href="https://react.dev" target="_blank">
+        {/* <a href="https://react.dev" target="_blank">
           <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        </a> */}
       </div>
       <h1>Vite + React</h1>
       <div id="comfy-canvas"></div>
@@ -60,4 +60,12 @@ function App() {
   );
 }
 
-export default App;
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+
+ReactDOM.createRoot(document.getElementById("root")!).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
