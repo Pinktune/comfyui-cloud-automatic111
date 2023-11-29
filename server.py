@@ -91,8 +91,10 @@ class PromptServer():
             os.path.realpath(__file__)), "web-react/dist")
         
         routes = web.RouteTableDef()
-        # routes.static('/cloud', os.path.join(os.path.dirname(
-        #     os.path.realpath(__file__)), "web-react/dist"))
+        routes.static('/cloud', os.path.join(os.path.dirname(
+            os.path.realpath(__file__)), "web-react/dist"))
+        # routes.static('/cloud/assets', os.path.join(os.path.dirname(
+        #     os.path.realpath(__file__)), "web-react/dist/assets"))
         self.routes = routes
         self.last_node_id = None
         self.client_id = None
@@ -545,7 +547,7 @@ class PromptServer():
 
         self.app.add_routes([
             web.static('/', self.web_root, follow_symlinks=True),
-            web.static('/cloud', self.web_cloud_root, follow_symlinks=True)
+            # web.static('/cloud', self.web_cloud_root, follow_symlinks=True)
         ])
 
     def get_queue_info(self):
