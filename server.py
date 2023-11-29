@@ -88,7 +88,7 @@ class PromptServer():
         self.web_root = os.path.join(os.path.dirname(
             os.path.realpath(__file__)), "web-react/dist")
         routes = web.RouteTableDef()
-        routes.static('/comfyui', os.path.join(os.path.dirname(
+        routes.static('/public/comfyui', os.path.join(os.path.dirname(
             os.path.realpath(__file__)), "web-react/dist/comfyui"))
         # app = web.Application()
         # app.router.add_static('/src/assets', path=os.path.join(os.path.dirname(
@@ -130,6 +130,10 @@ class PromptServer():
         @routes.get("/")
         async def get_root(request):
             return web.FileResponse(os.path.join(self.web_root, "index.html"))
+        
+        # @routes.get("/public/comfyui")
+        # async def get_root(request):
+        #     return web.FileResponse(os.path.join(self.web_root, "comfyui/index.html"))
 
         @routes.get("/embeddings")
         def get_embeddings(self):
