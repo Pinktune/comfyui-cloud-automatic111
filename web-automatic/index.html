@@ -10,6 +10,14 @@
     <link rel="stylesheet" type="text/css" href="./lib/litegraph.css" />
     <link rel="stylesheet" type="text/css" href="./style.css" />
     <link rel="stylesheet" type="text/css" href="./user.css" />
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
     <script type="text/javascript" src="./lib/litegraph.core.js"></script>
     <script
       type="text/javascript"
@@ -18,12 +26,16 @@
     ></script>
   </head>
   <body class="litegraph">
-    <div id="top-bar">top bar</div>
-    <script type="module">
+    <div id="top-bar">top bar111</div>
+    <div id="react-root"></div>
+
+    <!-- <script type="module">
       import { app } from "./scripts/app.js";
       await app.setup();
       window.app = app;
       window.graph = app.graph;
-    </script>
+    </script> -->
+    <!-- <script type="module" src="./index.js"></script> -->
+    <script src="Bundle.js"></script>
   </body>
 </html>
