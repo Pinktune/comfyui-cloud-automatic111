@@ -53,8 +53,6 @@ class ComfyApi extends EventTarget {
    * @param {boolean} isReconnect If the socket is connection is a reconnect attempt
    */
   #createSocket(isReconnect) {
-    //disable websocket for now
-    return;
     if (this.socket) {
       return;
     }
