@@ -6,16 +6,17 @@ class ComfyApi extends EventTarget {
     this.api_host = location.host;
     // console.log("meta.env.DEV", import.meta.env.DEV);
     // console.log("meta.env.MODE", import.meta.env.MODE);
-    if (
-      true &&
-      (this.api_host.indexOf("127.0.0.1") !== -1 ||
-        this.api_host.indexOf("localhost") !== -1)
-    ) {
-      // is localhost
-      this.api_base = "http://127.0.0.1:8188";
-      return;
-    }
+    // if (
+    //   true &&
+    //   (this.api_host.indexOf("127.0.0.1") !== -1 ||
+    //     this.api_host.indexOf("localhost") !== -1)
+    // ) {
+    //   // is localhost
+    //   this.api_base = "http://127.0.0.1:8188";
+    //   return;
+    // }
     this.api_base = location.pathname.split("/").slice(0, -1).join("/");
+    console.log("api_base", this.api_base);
   }
 
   apiURL(route) {

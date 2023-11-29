@@ -86,12 +86,13 @@ class PromptServer():
         self.app = web.Application(client_max_size=max_upload_size, middlewares=middlewares)
         self.sockets = dict()
         self.web_root = os.path.join(os.path.dirname(
+            os.path.realpath(__file__)), "web")
+        self.web_cloud_root = os.path.join(os.path.dirname(
             os.path.realpath(__file__)), "web-react/dist")
-                    # os.path.realpath(__file__)), "react-parcel-example/dist")
-
+        
         routes = web.RouteTableDef()
-        routes.static('/public/comfyui', os.path.join(os.path.dirname(
-            os.path.realpath(__file__)), "web-react/dist/comfyui"))
+        # routes.static('/cloud', os.path.join(os.path.dirname(
+        #     os.path.realpath(__file__)), "web-react/dist"))
         self.routes = routes
         self.last_node_id = None
         self.client_id = None
@@ -127,7 +128,14 @@ class PromptServer():
 
         @routes.get("/")
         async def get_root(request):
+            print('in root', self.web_root)
             return web.FileResponse(os.path.join(self.web_root, "index.html"))
+        
+        @routes.get("/cloud")
+        async def get_cloud(request):
+            # cloud_root = os.path.join(os.path.dirname(os.path.realpath(__file__)), "web-react/dist")
+            print('in cloud', self.web_cloud_root)
+            return web.FileResponse(os.path.join(self.web_cloud_root, "index.html"))
 
         @routes.get("/embeddings")
         def get_embeddings(self):
@@ -537,6 +545,7 @@ class PromptServer():
 
         self.app.add_routes([
             web.static('/', self.web_root, follow_symlinks=True),
+            web.static('/cloud', self.web_cloud_root, follow_symlinks=True)
         ])
 
     def get_queue_info(self):
