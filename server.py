@@ -88,6 +88,12 @@ class PromptServer():
         self.web_root = os.path.join(os.path.dirname(
             os.path.realpath(__file__)), "web-react/dist")
         routes = web.RouteTableDef()
+        routes.static('/comfyui', os.path.join(os.path.dirname(
+            os.path.realpath(__file__)), "web-react/dist/comfyui"))
+        # app = web.Application()
+        # app.router.add_static('/src/assets', path=os.path.join(os.path.dirname(
+        #     os.path.realpath(__file__)), "web-react/dist/assets"), name='assets')
+
         self.routes = routes
         self.last_node_id = None
         self.client_id = None

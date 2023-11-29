@@ -1,13 +1,13 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
-    <div style={{width:'1000px'}}>
+    <div style={{ width: "1000px" }}>
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -17,7 +17,11 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
-      <iframe src="./src/comfyui/index.html" title="Comfy Page" style={{width:'90%',height:'600px'}}/>
+      <iframe
+        src="/public/comfyui/index.html"
+        title="Comfy Page"
+        style={{ width: "90%", height: "600px" }}
+      />
 
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
@@ -31,7 +35,7 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
