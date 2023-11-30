@@ -41,6 +41,19 @@ function App() {
               }}
             />
           </TabPanel>
+          <TabPanel style={{ padding: 0 }}>
+            <p>22222</p>
+            <iframe
+              src="/index.html"
+              title="Comfy Page"
+              style={{
+                width: "100%",
+                height: "90vh",
+                // minHeight: "800px",
+                border: "none",
+              }}
+            />
+          </TabPanel>
         </TabPanels>
       </Tabs>
     </Box>
