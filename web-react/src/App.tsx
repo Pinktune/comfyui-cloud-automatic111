@@ -20,7 +20,7 @@ function App() {
       <iframe
         src="/index.html"
         title="Comfy Page"
-        style={{ width: "90%", height: "600px" }}
+        style={{ width: "90%", height: "600px", border: "none" }}
       />
 
       <div className="card">
