@@ -1,40 +1,49 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+import { Tabs, TabList, TabPanels, Tab, TabPanel, Box } from "@chakra-ui/react";
 
 function App() {
-  const [count, setCount] = useState(0);
-
+  const selectStyle = {
+    color: "white",
+    bg: "#333",
+  };
   return (
-    <div style={{ width: "1000px" }}>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <iframe
-        src="/index.html"
-        title="Comfy Page"
-        style={{ width: "90%", height: "600px", border: "none" }}
-      />
-
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
+    <Box
+      style={{
+        width: "100%",
+        // height: "100vh",
+        paddingTop: 20,
+      }}
+      minH={800}
+    >
+      <Tabs variant="unstyled">
+        <TabList
+          defaultValue={"ComfyUI"}
+          style={{ marginBottom: 20, marginLeft: 16 }}
+          gap={4}
+        >
+          <Tab _selected={selectStyle}>Workspace</Tab>
+          <Tab _selected={selectStyle}>ComfyUI</Tab>
+          <Tab _selected={selectStyle}>WebUI</Tab>
+          <Tab _selected={selectStyle}>Models</Tab>
+        </TabList>
+        <TabPanels>
+          <TabPanel>
+            <p>one!</p>
+          </TabPanel>
+          <TabPanel style={{ padding: 0 }}>
+            <iframe
+              src="/index.html"
+              title="Comfy Page"
+              style={{
+                width: "100%",
+                height: "90vh",
+                // minHeight: "800px",
+                border: "none",
+              }}
+            />
+          </TabPanel>
+        </TabPanels>
+      </Tabs>
+    </Box>
   );
 }
 
