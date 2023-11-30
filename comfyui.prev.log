@@ -1,4 +1,4 @@
-** ComfyUI start up time: 2023-11-30 18:16:18.235126
+** ComfyUI start up time: 2023-11-30 19:25:33.097752
 
 Prestartup times for custom nodes:
    0.0 seconds: /Users/weixuan/git/comfyui-cloud-automatic111/custom_nodes/ComfyUI-Manager
@@ -10,7 +10,7 @@ VAE dtype: torch.float32
 Using sub quadratic optimization for cross attention, if you have memory or speed issues try using: --use-split-cross-attention
 possible_module ComfyUI-Manager
 ### Loading: ComfyUI-Manager (V1.5.2)
-### ComfyUI Revision: 1769 on 'make-extension' [c99b4d09] | Released on '2023-11-30'
+### ComfyUI Revision: 1770 on 'make-extension' [3d1f4873] | Released on '2023-11-30'
 manager js_dest_path /Users/weixuan/git/comfyui-cloud-automatic111/web/extensions/comfyui-manager
 possible_module .DS_Store
 possible_module WorkspaceManager
@@ -26,6 +26,12 @@ Starting server
 
 To see the GUI go to: http://127.0.0.1:8188
 in root /Users/weixuan/git/comfyui-cloud-automatic111/web
+FETCH DATA from: /Users/weixuan/git/comfyui-cloud-automatic111/custom_nodes/ComfyUI-Manager/extension-node-map.json
+FETCH DATA from: /Users/weixuan/git/comfyui-cloud-automatic111/custom_nodes/ComfyUI-Manager/extension-node-map.json
+FETCH DATA from: /Users/weixuan/git/comfyui-cloud-automatic111/custom_nodes/ComfyUI-Manager/extension-node-map.json
+FETCH DATA from: /Users/weixuan/git/comfyui-cloud-automatic111/custom_nodes/ComfyUI-Manager/extension-node-map.json
+FETCH DATA from: /Users/weixuan/git/comfyui-cloud-automatic111/custom_nodes/ComfyUI-Manager/extension-node-map.json
+FETCH DATA from: /Users/weixuan/git/comfyui-cloud-automatic111/custom_nodes/ComfyUI-Manager/extension-node-map.json
 FETCH DATA from: /Users/weixuan/git/comfyui-cloud-automatic111/custom_nodes/ComfyUI-Manager/extension-node-map.json
 
 Stopped server
