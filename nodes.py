@@ -1792,7 +1792,7 @@ def load_custom_node(module_path, ignore=set()):
         else:
             module_spec = importlib.util.spec_from_file_location(module_name, os.path.join(module_path, "__init__.py"))
             module_dir = module_path
-
+        print('module_spec', module_spec)
         module = importlib.util.module_from_spec(module_spec)
         sys.modules[module_name] = module
         module_spec.loader.exec_module(module)

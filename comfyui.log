@@ -1,4 +1,4 @@
-** ComfyUI start up time: 2023-11-30 19:26:06.033875
+** ComfyUI start up time: 2023-12-05 17:03:01.514796
 
 Prestartup times for custom nodes:
    0.0 seconds: /Users/weixuan/git/comfyui-cloud-automatic111/custom_nodes/ComfyUI-Manager
@@ -8,44 +8,48 @@ Set vram state to: SHARED
 Device: mps
 VAE dtype: torch.float32
 Using sub quadratic optimization for cross attention, if you have memory or speed issues try using: --use-split-cross-attention
+module_spec ModuleSpec(name='/Users/weixuan/git/comfyui-cloud-automatic111/comfy_extras/nodes_latent', loader=<_frozen_importlib_external.SourceFileLoader object at 0x1520c0400>, origin='/Users/weixuan/git/comfyui-cloud-automatic111/comfy_extras/nodes_latent.py')
+module_spec ModuleSpec(name='/Users/weixuan/git/comfyui-cloud-automatic111/comfy_extras/nodes_hypernetwork', loader=<_frozen_importlib_external.SourceFileLoader object at 0x1520c0c10>, origin='/Users/weixuan/git/comfyui-cloud-automatic111/comfy_extras/nodes_hypernetwork.py')
+module_spec ModuleSpec(name='/Users/weixuan/git/comfyui-cloud-automatic111/comfy_extras/nodes_upscale_model', loader=<_frozen_importlib_external.SourceFileLoader object at 0x1520bc550>, origin='/Users/weixuan/git/comfyui-cloud-automatic111/comfy_extras/nodes_upscale_model.py')
+module_spec ModuleSpec(name='/Users/weixuan/git/comfyui-cloud-automatic111/comfy_extras/nodes_post_processing', loader=<_frozen_importlib_external.SourceFileLoader object at 0x1520bcd00>, origin='/Users/weixuan/git/comfyui-cloud-automatic111/comfy_extras/nodes_post_processing.py')
+module_spec ModuleSpec(name='/Users/weixuan/git/comfyui-cloud-automatic111/comfy_extras/nodes_mask', loader=<_frozen_importlib_external.SourceFileLoader object at 0x1570ab880>, origin='/Users/weixuan/git/comfyui-cloud-automatic111/comfy_extras/nodes_mask.py')
+module_spec ModuleSpec(name='/Users/weixuan/git/comfyui-cloud-automatic111/comfy_extras/nodes_compositing', loader=<_frozen_importlib_external.SourceFileLoader object at 0x1570aba00>, origin='/Users/weixuan/git/comfyui-cloud-automatic111/comfy_extras/nodes_compositing.py')
+module_spec ModuleSpec(name='/Users/weixuan/git/comfyui-cloud-automatic111/comfy_extras/nodes_rebatch', loader=<_frozen_importlib_external.SourceFileLoader object at 0x15710c580>, origin='/Users/weixuan/git/comfyui-cloud-automatic111/comfy_extras/nodes_rebatch.py')
+module_spec ModuleSpec(name='/Users/weixuan/git/comfyui-cloud-automatic111/comfy_extras/nodes_model_merging', loader=<_frozen_importlib_external.SourceFileLoader object at 0x15710cfa0>, origin='/Users/weixuan/git/comfyui-cloud-automatic111/comfy_extras/nodes_model_merging.py')
+module_spec ModuleSpec(name='/Users/weixuan/git/comfyui-cloud-automatic111/comfy_extras/nodes_tomesd', loader=<_frozen_importlib_external.SourceFileLoader object at 0x1571192e0>, origin='/Users/weixuan/git/comfyui-cloud-automatic111/comfy_extras/nodes_tomesd.py')
+module_spec ModuleSpec(name='/Users/weixuan/git/comfyui-cloud-automatic111/comfy_extras/nodes_clip_sdxl', loader=<_frozen_importlib_external.SourceFileLoader object at 0x157119e50>, origin='/Users/weixuan/git/comfyui-cloud-automatic111/comfy_extras/nodes_clip_sdxl.py')
+module_spec ModuleSpec(name='/Users/weixuan/git/comfyui-cloud-automatic111/comfy_extras/nodes_canny', loader=<_frozen_importlib_external.SourceFileLoader object at 0x157124130>, origin='/Users/weixuan/git/comfyui-cloud-automatic111/comfy_extras/nodes_canny.py')
+module_spec ModuleSpec(name='/Users/weixuan/git/comfyui-cloud-automatic111/comfy_extras/nodes_freelunch', loader=<_frozen_importlib_external.SourceFileLoader object at 0x1571244c0>, origin='/Users/weixuan/git/comfyui-cloud-automatic111/comfy_extras/nodes_freelunch.py')
+module_spec ModuleSpec(name='/Users/weixuan/git/comfyui-cloud-automatic111/comfy_extras/nodes_custom_sampler', loader=<_frozen_importlib_external.SourceFileLoader object at 0x157124790>, origin='/Users/weixuan/git/comfyui-cloud-automatic111/comfy_extras/nodes_custom_sampler.py')
+module_spec ModuleSpec(name='/Users/weixuan/git/comfyui-cloud-automatic111/comfy_extras/nodes_hypertile', loader=<_frozen_importlib_external.SourceFileLoader object at 0x157124ac0>, origin='/Users/weixuan/git/comfyui-cloud-automatic111/comfy_extras/nodes_hypertile.py')
+module_spec ModuleSpec(name='/Users/weixuan/git/comfyui-cloud-automatic111/comfy_extras/nodes_model_advanced', loader=<_frozen_importlib_external.SourceFileLoader object at 0x1571314c0>, origin='/Users/weixuan/git/comfyui-cloud-automatic111/comfy_extras/nodes_model_advanced.py')
+module_spec ModuleSpec(name='/Users/weixuan/git/comfyui-cloud-automatic111/comfy_extras/nodes_model_downscale', loader=<_frozen_importlib_external.SourceFileLoader object at 0x157131be0>, origin='/Users/weixuan/git/comfyui-cloud-automatic111/comfy_extras/nodes_model_downscale.py')
+module_spec ModuleSpec(name='/Users/weixuan/git/comfyui-cloud-automatic111/comfy_extras/nodes_images', loader=<_frozen_importlib_external.SourceFileLoader object at 0x157131e20>, origin='/Users/weixuan/git/comfyui-cloud-automatic111/comfy_extras/nodes_images.py')
+module_spec ModuleSpec(name='/Users/weixuan/git/comfyui-cloud-automatic111/comfy_extras/nodes_video_model', loader=<_frozen_importlib_external.SourceFileLoader object at 0x15713d370>, origin='/Users/weixuan/git/comfyui-cloud-automatic111/comfy_extras/nodes_video_model.py')
 possible_module ComfyUI-Manager
+module_spec ModuleSpec(name='ComfyUI-Manager', loader=<_frozen_importlib_external.SourceFileLoader object at 0x15713d700>, origin='/Users/weixuan/git/comfyui-cloud-automatic111/custom_nodes/ComfyUI-Manager/__init__.py', submodule_search_locations=['/Users/weixuan/git/comfyui-cloud-automatic111/custom_nodes/ComfyUI-Manager'])
 ### Loading: ComfyUI-Manager (V1.5.2)
-### ComfyUI Revision: 1770 on 'make-extension' [3d1f4873] | Released on '2023-11-30'
+### ComfyUI Revision: 1771 on 'make-extension' [9aa39bf8] | Released on '2023-11-30'
 manager js_dest_path /Users/weixuan/git/comfyui-cloud-automatic111/web/extensions/comfyui-manager
 possible_module .DS_Store
+possible_module ComfyUI-AnimateDiff-Evolved
+module_spec ModuleSpec(name='ComfyUI-AnimateDiff-Evolved', loader=<_frozen_importlib_external.SourceFileLoader object at 0x1571c1af0>, origin='/Users/weixuan/git/comfyui-cloud-automatic111/custom_nodes/ComfyUI-AnimateDiff-Evolved/__init__.py', submodule_search_locations=['/Users/weixuan/git/comfyui-cloud-automatic111/custom_nodes/ComfyUI-AnimateDiff-Evolved'])
+[AnimateDiffEvo] - [0;31mERROR[0m - No motion models found. Please download one and place in: ['/Users/weixuan/git/comfyui-cloud-automatic111/custom_nodes/ComfyUI-AnimateDiff-Evolved/models']
 possible_module WorkspaceManager
+module_spec ModuleSpec(name='WorkspaceManager', loader=<_frozen_importlib_external.SourceFileLoader object at 0x1571c1730>, origin='/Users/weixuan/git/comfyui-cloud-automatic111/custom_nodes/WorkspaceManager/__init__.py', submodule_search_locations=['/Users/weixuan/git/comfyui-cloud-automatic111/custom_nodes/WorkspaceManager'])
 ### Loading: Workspace Manager (V1.0.0)
-wp manager js_dest_path /Users/weixuan/git/comfyui-cloud-automatic111/web/extensions/comfyui-manager
+requirements_path /Users/weixuan/git/comfyui-cloud-automatic111/custom_nodes/WorkspaceManager/requirements.txt
+[Workspace Manager] Current version: 1.0.0, latest version: 1.1.0
+[Workspace Manager] Update is needed. Downloading latest version...
+[Workspace Manager] Downloading from https://github.com/11cafe/comfyui-workspace-manager/archive/refs/heads/main.zip to /Users/weixuan/git/comfyui-cloud-automatic111/custom_nodes/WorkspaceManager
+[Workspace Manager] Error occurred during download and extraction: Destination path '/Users/weixuan/git/comfyui-cloud-automatic111/custom_nodes/WorkspaceManager/ui/ui' already exists
 possible_module example_node.py.example
 
 Import times for custom nodes:
-   0.0 seconds: /Users/weixuan/git/comfyui-cloud-automatic111/custom_nodes/WorkspaceManager
+   0.0 seconds: /Users/weixuan/git/comfyui-cloud-automatic111/custom_nodes/ComfyUI-AnimateDiff-Evolved
    0.1 seconds: /Users/weixuan/git/comfyui-cloud-automatic111/custom_nodes/ComfyUI-Manager
+  10.9 seconds: /Users/weixuan/git/comfyui-cloud-automatic111/custom_nodes/WorkspaceManager
 
 Starting server
 
 To see the GUI go to: http://127.0.0.1:8188
-in root /Users/weixuan/git/comfyui-cloud-automatic111/web
-FETCH DATA from: /Users/weixuan/git/comfyui-cloud-automatic111/custom_nodes/ComfyUI-Manager/extension-node-map.json
-FETCH DATA from: /Users/weixuan/git/comfyui-cloud-automatic111/custom_nodes/ComfyUI-Manager/extension-node-map.json
-FETCH DATA from: /Users/weixuan/git/comfyui-cloud-automatic111/custom_nodes/ComfyUI-Manager/extension-node-map.json
-FETCH DATA from: /Users/weixuan/git/comfyui-cloud-automatic111/custom_nodes/ComfyUI-Manager/extension-node-map.json
-FETCH DATA from: /Users/weixuan/git/comfyui-cloud-automatic111/custom_nodes/ComfyUI-Manager/extension-node-map.json
-FETCH DATA from: /Users/weixuan/git/comfyui-cloud-automatic111/custom_nodes/ComfyUI-Manager/extension-node-map.json
-FETCH DATA from: /Users/weixuan/git/comfyui-cloud-automatic111/custom_nodes/ComfyUI-Manager/extension-node-map.json
-in root /Users/weixuan/git/comfyui-cloud-automatic111/web
-FETCH DATA from: /Users/weixuan/git/comfyui-cloud-automatic111/custom_nodes/ComfyUI-Manager/extension-node-map.json
-FETCH DATA from: /Users/weixuan/git/comfyui-cloud-automatic111/custom_nodes/ComfyUI-Manager/extension-node-map.json
-FETCH DATA from: /Users/weixuan/git/comfyui-cloud-automatic111/custom_nodes/ComfyUI-Manager/extension-node-map.json
-FETCH DATA from: /Users/weixuan/git/comfyui-cloud-automatic111/custom_nodes/ComfyUI-Manager/extension-node-map.json
-FETCH DATA from: /Users/weixuan/git/comfyui-cloud-automatic111/custom_nodes/ComfyUI-Manager/extension-node-map.json
-FETCH DATA from: /Users/weixuan/git/comfyui-cloud-automatic111/custom_nodes/ComfyUI-Manager/extension-node-map.json
-FETCH DATA from: /Users/weixuan/git/comfyui-cloud-automatic111/custom_nodes/ComfyUI-Manager/extension-node-map.json
-in root /Users/weixuan/git/comfyui-cloud-automatic111/web
-FETCH DATA from: /Users/weixuan/git/comfyui-cloud-automatic111/custom_nodes/ComfyUI-Manager/extension-node-map.json
-FETCH DATA from: /Users/weixuan/git/comfyui-cloud-automatic111/custom_nodes/ComfyUI-Manager/extension-node-map.json
-FETCH DATA from: /Users/weixuan/git/comfyui-cloud-automatic111/custom_nodes/ComfyUI-Manager/extension-node-map.json
-FETCH DATA from: /Users/weixuan/git/comfyui-cloud-automatic111/custom_nodes/ComfyUI-Manager/extension-node-map.json
-FETCH DATA from: /Users/weixuan/git/comfyui-cloud-automatic111/custom_nodes/ComfyUI-Manager/extension-node-map.json
-FETCH DATA from: /Users/weixuan/git/comfyui-cloud-automatic111/custom_nodes/ComfyUI-Manager/extension-node-map.json
-FETCH DATA from: /Users/weixuan/git/comfyui-cloud-automatic111/custom_nodes/ComfyUI-Manager/extension-node-map.json

@@ -87,14 +87,7 @@ class PromptServer():
         self.sockets = dict()
         self.web_root = os.path.join(os.path.dirname(
             os.path.realpath(__file__)), "web")
-        self.web_cloud_root = os.path.join(os.path.dirname(
-            os.path.realpath(__file__)), "web-react/dist")
-        
         routes = web.RouteTableDef()
-        routes.static('/cloud', os.path.join(os.path.dirname(
-            os.path.realpath(__file__)), "web-react/dist"))
-        # routes.static('/cloud/assets', os.path.join(os.path.dirname(
-        #     os.path.realpath(__file__)), "web-react/dist/assets"))
         self.routes = routes
         self.last_node_id = None
         self.client_id = None
@@ -130,14 +123,7 @@ class PromptServer():
 
         @routes.get("/")
         async def get_root(request):
-            print('in root', self.web_root)
             return web.FileResponse(os.path.join(self.web_root, "index.html"))
-        
-        @routes.get("/cloud")
-        async def get_cloud(request):
-            # cloud_root = os.path.join(os.path.dirname(os.path.realpath(__file__)), "web-react/dist")
-            print('in cloud', self.web_cloud_root)
-            return web.FileResponse(os.path.join(self.web_cloud_root, "index.html"))
 
         @routes.get("/embeddings")
         def get_embeddings(self):
@@ -402,10 +388,7 @@ class PromptServer():
 
         @routes.get("/prompt")
         async def get_prompt(request):
-            headers = {
-            'Access-Control-Allow-Origin': '*'
-            }
-            return web.json_response(self.get_queue_info(),headers=headers)
+            return web.json_response(self.get_queue_info())
 
         def node_info(node_class):
             obj_class = nodes.NODE_CLASS_MAPPINGS[node_class]
@@ -468,7 +451,7 @@ class PromptServer():
 
         @routes.post("/prompt")
         async def post_prompt(request):
-            print("got prompt")
+            print("got prompt11111")
             resp_code = 200
             out_string = ""
             json_data =  await request.json()
@@ -496,6 +479,7 @@ class PromptServer():
                 if valid[0]:
                     prompt_id = str(uuid.uuid4())
                     outputs_to_execute = valid[2]
+                    print('prompt_queue/put', (number, prompt_id, prompt, extra_data, outputs_to_execute))
                     self.prompt_queue.put((number, prompt_id, prompt, extra_data, outputs_to_execute))
                     response = {"prompt_id": prompt_id, "number": number, "node_errors": valid[3]}
                     return web.json_response(response)
@@ -547,7 +531,6 @@ class PromptServer():
 
         self.app.add_routes([
             web.static('/', self.web_root, follow_symlinks=True),
-            # web.static('/cloud', self.web_cloud_root, follow_symlinks=True)
         ])
 
     def get_queue_info(self):

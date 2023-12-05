@@ -1,37 +1,64 @@
-** ComfyUI start up time: 2023-11-30 19:25:33.097752
+** ComfyUI start up time: 2023-12-05 17:02:54.384079
 
 Prestartup times for custom nodes:
    0.0 seconds: /Users/weixuan/git/comfyui-cloud-automatic111/custom_nodes/ComfyUI-Manager
 
 Total VRAM 65536 MB, total RAM 65536 MB
-Set vram state to: SHARED
-Device: mps
-VAE dtype: torch.float32
-Using sub quadratic optimization for cross attention, if you have memory or speed issues try using: --use-split-cross-attention
-possible_module ComfyUI-Manager
-### Loading: ComfyUI-Manager (V1.5.2)
-### ComfyUI Revision: 1770 on 'make-extension' [3d1f4873] | Released on '2023-11-30'
-manager js_dest_path /Users/weixuan/git/comfyui-cloud-automatic111/web/extensions/comfyui-manager
-possible_module .DS_Store
-possible_module WorkspaceManager
-### Loading: Workspace Manager (V1.0.0)
-wp manager js_dest_path /Users/weixuan/git/comfyui-cloud-automatic111/web/extensions/comfyui-manager
-possible_module example_node.py.example
-
-Import times for custom nodes:
-   0.0 seconds: /Users/weixuan/git/comfyui-cloud-automatic111/custom_nodes/WorkspaceManager
-   0.1 seconds: /Users/weixuan/git/comfyui-cloud-automatic111/custom_nodes/ComfyUI-Manager
-
-Starting server
-
-To see the GUI go to: http://127.0.0.1:8188
-in root /Users/weixuan/git/comfyui-cloud-automatic111/web
-FETCH DATA from: /Users/weixuan/git/comfyui-cloud-automatic111/custom_nodes/ComfyUI-Manager/extension-node-map.json
-FETCH DATA from: /Users/weixuan/git/comfyui-cloud-automatic111/custom_nodes/ComfyUI-Manager/extension-node-map.json
-FETCH DATA from: /Users/weixuan/git/comfyui-cloud-automatic111/custom_nodes/ComfyUI-Manager/extension-node-map.json
-FETCH DATA from: /Users/weixuan/git/comfyui-cloud-automatic111/custom_nodes/ComfyUI-Manager/extension-node-map.json
-FETCH DATA from: /Users/weixuan/git/comfyui-cloud-automatic111/custom_nodes/ComfyUI-Manager/extension-node-map.json
-FETCH DATA from: /Users/weixuan/git/comfyui-cloud-automatic111/custom_nodes/ComfyUI-Manager/extension-node-map.json
-FETCH DATA from: /Users/weixuan/git/comfyui-cloud-automatic111/custom_nodes/ComfyUI-Manager/extension-node-map.json
-
-Stopped server
+Traceback (most recent call last):
+  File "/Users/weixuan/git/comfyui-cloud-automatic111/main.py", line 72, in <module>
+    import execution
+  File "/Users/weixuan/git/comfyui-cloud-automatic111/execution.py", line 12, in <module>
+    import nodes
+  File "/Users/weixuan/git/comfyui-cloud-automatic111/nodes.py", line 20, in <module>
+    import comfy.diffusers_load
+  File "/Users/weixuan/git/comfyui-cloud-automatic111/comfy/diffusers_load.py", line 4, in <module>
+    import comfy.sd
+  File "/Users/weixuan/git/comfyui-cloud-automatic111/comfy/sd.py", line 5, in <module>
+    from comfy import model_management
+  File "/Users/weixuan/git/comfyui-cloud-automatic111/comfy/model_management.py", line 218, in <module>
+    import accelerate
+  File "/Users/weixuan/Library/Python/3.9/lib/python/site-packages/accelerate/__init__.py", line 3, in <module>
+    from .accelerator import Accelerator
+  File "/Users/weixuan/Library/Python/3.9/lib/python/site-packages/accelerate/accelerator.py", line 36, in <module>
+    from .checkpointing import load_accelerator_state, load_custom_state, save_accelerator_state, save_custom_state
+  File "/Users/weixuan/Library/Python/3.9/lib/python/site-packages/accelerate/checkpointing.py", line 24, in <module>
+    from .utils import (
+  File "/Users/weixuan/Library/Python/3.9/lib/python/site-packages/accelerate/utils/__init__.py", line 138, in <module>
+    from .fsdp_utils import load_fsdp_model, load_fsdp_optimizer, save_fsdp_model, save_fsdp_optimizer
+  File "/Users/weixuan/Library/Python/3.9/lib/python/site-packages/accelerate/utils/fsdp_utils.py", line 25, in <module>
+    import torch.distributed.checkpoint as dist_cp
+  File "/Users/weixuan/Library/Python/3.9/lib/python/site-packages/torch/distributed/checkpoint/__init__.py", line 7, in <module>
+    from .state_dict_loader import load_state_dict
+  File "/Users/weixuan/Library/Python/3.9/lib/python/site-packages/torch/distributed/checkpoint/state_dict_loader.py", line 10, in <module>
+    from .default_planner import DefaultLoadPlanner
+  File "/Users/weixuan/Library/Python/3.9/lib/python/site-packages/torch/distributed/checkpoint/default_planner.py", line 14, in <module>
+    from torch.distributed._tensor import DTensor
+  File "/Users/weixuan/Library/Python/3.9/lib/python/site-packages/torch/distributed/_tensor/__init__.py", line 6, in <module>
+    import torch.distributed._tensor.ops
+  File "/Users/weixuan/Library/Python/3.9/lib/python/site-packages/torch/distributed/_tensor/ops/__init__.py", line 2, in <module>
+    from .embedding_ops import *  # noqa: F403
+  File "/Users/weixuan/Library/Python/3.9/lib/python/site-packages/torch/distributed/_tensor/ops/embedding_ops.py", line 5, in <module>
+    from torch.distributed._tensor.op_schema import OpSchema, OutputSharding
+  File "/Users/weixuan/Library/Python/3.9/lib/python/site-packages/torch/distributed/_tensor/op_schema.py", line 7, in <module>
+    from torch.distributed._tensor.placement_types import DTensorSpec
+  File "/Users/weixuan/Library/Python/3.9/lib/python/site-packages/torch/distributed/_tensor/placement_types.py", line 7, in <module>
+    import torch.distributed._functional_collectives as funcol
+  File "/Users/weixuan/Library/Python/3.9/lib/python/site-packages/torch/distributed/_functional_collectives.py", line 649, in <module>
+    _register_ops()
+  File "/Users/weixuan/Library/Python/3.9/lib/python/site-packages/torch/distributed/_functional_collectives.py", line 640, in _register_ops
+    impl_abstract(f"c10d_functional::{op_name}")(meta_impl)
+  File "/Users/weixuan/Library/Python/3.9/lib/python/site-packages/torch/_custom_ops.py", line 253, in impl_abstract
+    return torch.library.impl_abstract(qualname, func, _stacklevel=2)
+  File "/Users/weixuan/Library/Python/3.9/lib/python/site-packages/torch/library.py", line 421, in impl_abstract
+    frame = inspect.stack()[_stacklevel]
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/inspect.py", line 1552, in stack
+    return getouterframes(sys._getframe(1), context)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/inspect.py", line 1529, in getouterframes
+    frameinfo = (frame,) + getframeinfo(frame, context)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/inspect.py", line 1503, in getframeinfo
+    lines, lnum = findsource(frame)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/inspect.py", line 829, in findsource
+    module = getmodule(object, file)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/inspect.py", line 748, in getmodule
+    if f == _filesbymodname.get(modname, None):
+KeyboardInterrupt

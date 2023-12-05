@@ -14,7 +14,7 @@ import { createImageHost, calculateImageGrid } from "./ui/imagePreview.js";
 
 export const ANIM_PREVIEW_WIDGET = "$$comfy_animation_preview";
 
-function sanitizeNodeName(string) {
+export function sanitizeNodeName(string) {
   let entityMap = {
     "&": "",
     "<": "",
@@ -1512,11 +1512,13 @@ export class ComfyApp {
     const app = this;
     // Load node definitions from the backend
     const defs = await api.getNodeDefs();
+    console.log("Loaded node definitions", defs);
     await this.registerNodesFromDefs(defs);
     await this.#invokeExtensionsAsync("registerCustomNodes");
   }
 
   async registerNodesFromDefs(defs) {
+    console.log("registerNodesFromDefs in app.js", defs);
     await this.#invokeExtensionsAsync("addCustomNodeDefs", defs);
 
     // Generate list of known widgets
@@ -1683,8 +1685,6 @@ export class ComfyApp {
    * @param {*} graphData A serialized graph object
    */
   loadGraphData(graphData) {
-    console.log("loadGraphData", graphData);
-
     this.clean();
 
     let reset_invalid_values = false;
@@ -2032,7 +2032,6 @@ export class ComfyApp {
    * @param {File} file
    */
   async handleFile(file) {
-    console.log("handleFile", file);
     if (file.type === "image/png") {
       const pngInfo = await getPngMetadata(file);
       if (pngInfo) {
